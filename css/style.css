@@ -1,0 +1,27 @@
+body{
+	background-color: #fefcbf;
+}
+.container{
+	text-align: center;
+	padding-top: 50px;
+}
+hr{
+	width: 600px;
+	border-bottom: 1px solid black;
+	color: black;
+}
+.quote-box{
+	border: 3px solid;
+	border-radius: 15px;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+#quote{
+	font-family: courier new;
+	font-size: 20px;
+}
+#author{
+	font-family: Times New Roman;
+	font-size: 20px;
+
+}
