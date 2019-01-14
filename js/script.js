@@ -1,4 +1,5 @@
-let qt_btn = document.getElementById('qt_btn');
+var quote = document.getElementById('quote');
+
 
 let array1 = [ "peace " , "love" , "money"];
 let array2 = [ "will be " , "will never be ", "maybe will be"];
@@ -13,7 +14,7 @@ let quote = '';
     for (let i = 0; i < arrs.length; i++) {
         quote += arrs[i][Math.floor(Math.random() * 3)] + ' ';
     }
-    if (checkStringForMatch(quote, 'peace') && checkStringForMatch(quote, 'will be') && checkStringForMatch(quote, 'your end')){
+    if (checkStringForMatch(quote, 'peace', 'love') && checkStringForMatch(quote, 'will be', 'will never be') && checkStringForMatch(quote, 'your end', 'your tesks')){
         alert("you found me!");
     } else {
         alert(quote)
@@ -23,3 +24,5 @@ let quote = '';
 qt_btn.addEventListener("click", function(event) {
     finalQuote(array1, array2, array3);
 });
+
+finalQuote();
