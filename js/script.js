@@ -1,28 +1,140 @@
-var quote = document.getElementById('quote');
+// sentences for generatorOne
+let userChoice;
+let generatorChoice;
+let first = 
+[
+[   'Peace,',
+    'Love',
+    'Money',
+    'iPhones',
+    'Beauty',
+    'Happines',
+    
+],
+[   ' will be',
+    ' will not be',
+    ' maybe wil be',
+    ' will never be',
+    ' must be',
+    ' must not be',
+    
+],
+[
+    ' your end',
+    ' your start',
+    ' your future',
+    ' your tasks',
+    ' your past',
+    
+],
+]
 
-
-let array1 = [ "peace " , "love" , "money"];
-let array2 = [ "will be " , "will never be ", "maybe will be"];
-let array3 = ["your end", "your start", "your tasks"];
-
-function checkStringForMatch (str, word) {
-    return str.indexOf(word) !== -1
+function printInside(text) {
+    let newParagraph = document.createElement('p');
+    newParagraph.className = "new-paragraph";
+    newParagraph.innerText = text;
+    document.getElementById('quote').appendChild(newParagraph);
+       
 }
+// sentences for generatorTwo
+let second = [
+[   'Tulips',
+    'Roses',
+    'Daisys',
+    'Azaleas',
+    'Begonias',
+    'Gardenias',
+    
+],
+[   ' are',
+    ' are not',
+    ' maybe are',
+    ' maybe are not',
+    ' have to be',
+    ' have not to be',
+    
+],
+[
+    ' good',
+    ' awesome',
+    ' great',
+    ' red',
+    ' black',
+    
+],
 
-function finalQuote(...arrs) {
-let quote = '';
-    for (let i = 0; i < arrs.length; i++) {
-        quote += arrs[i][Math.floor(Math.random() * 3)] + ' ';
+];
+
+
+// create a quote with generator
+
+function generator(arr) {
+    quoteTwo = "";
+    quoteTwo = arr[0][Math.floor(Math.random()*arr[0].length)];
+    quoteTwo += arr[1][Math.floor(Math.random()*arr[1].length)];
+
+    if(arr.length == 3) {
+        quoteTwo += arr[2][Math.floor(Math.random()*arr[2].length)];
     }
-    if (checkStringForMatch(quote, 'peace', 'love') && checkStringForMatch(quote, 'will be', 'will never be') && checkStringForMatch(quote, 'your end', 'your tesks')){
-        alert("you found me!");
-    } else {
-        alert(quote)
+    printInside(quoteTwo);
+};
+
+//function getValue(button) {
+ //   userChoice = button.value;
+//};
+/*
+function getValue()
+    {
+      var quotesChoice = document.getElementById("quotesChoice");
+      for (var i = 0; i < quotesChoice.options.length; i++) {
+         if(quotesChoice.options[i].selected ==true){
+              return result;
+          }
+      }
     }
-}
+
+function getQuote(button) {
+    generatorChoice = button.value;
+   // document.getElementById('quote').innerHTML = "";
+     for (var i = 0; i < userChoice; i++) {
+        if (generatorChoice == 1) {
+            generator(first);
+        } else if (generatorChoice == 2) {
+            generator(second);
+        }   
+    } 
+}; 
+*/
+
+var finalQuote = function(){
+    var quotesChoice = document.getElementById("quotesChoice");
+      for (var i = 0; i < quotesChoice.options.length; i++) {
+         if(quotesChoice.options[i].selected ==true){
+              return result;
+          }
+      }
+       generatorChoice = button.value;
+   // document.getElementById('quote').innerHTML = "";
+     for (var i = 0; i < userChoice; i++) {
+        if (generatorChoice == 1) {
+            generator(first);
+        } else if (generatorChoice == 2) {
+            generator(second);
+        }   
+    } 
+};
 
 qt_btn.addEventListener("click", function(event) {
-    finalQuote(array1, array2, array3);
+    finalQuote();
 });
 
-finalQuote();
+
+
+
+
+
+
+
+
+
+

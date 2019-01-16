@@ -17,19 +17,28 @@
 				<hr>
 			</div>
 		</div>
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="quote-box">
 
-						<p id="quote">Quote</p>
-						
-						
-					</div>
-				</div>
-			</div>
-		<div class="quote">
-			<button onclick="finalQuote()" class="btn btn-sm">New Quote</button>
-		</div>
+			 <div class="btn-small-group" role="group">
+                <h3>How many quotes do you want to create?</h3>
+                <select class="form-control" id="quotesChoice">
+                <option id="one" value='1' class="btn-small" onclick="getValue(this)">1</option>
+                <option id="two" value='2' class="btn-small" onclick="getValue(this)">2</option>
+                <option type="button" name="button" id="three" value='3' class="btn-small" onclick="getValue(this)">3</option>
+                <option id="four" value='4' class="btn-small" onclick="getValue(this)">4</option>
+                <option id="five" value='5' class="btn-small" onclick="getValue(this)">5</option>
+            </select>
+            </div>
+
+			<div class="btn-big-group">
+                <h3>Choose quote generator</h3>
+                <input type="button" id="generatorOne" name="buttonsTwo" class="btn-big" value="1" onclick="getQuote(this)">
+                <input type="button" id="generatorTwo" name="buttonsTwo" class="btn-big" value="2" onclick="getQuote(this)">
+            </div>
+
+            <div id="quote"></div>
+
+			<div id="qt_btn" class="btn btn-primary brn-lg-active" role="button">Get Quote!</div>
+		
 	</div>
 	<script src="js/script.js"></script>
 </body>
