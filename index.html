@@ -1,45 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="utf-8">
-		<title>Random Qoute Machine</title>
-
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-		 
-		<link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+         
+    <title> Random quote machine </title>
 </head>
+
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h1>Random Quote Machine</h1>
-				<hr>
-			</div>
-		</div>
+    <div class="container">
+        <header>
+            
+        </header>
 
-			 <div class="btn-small-group" role="group">
-                <h3>How many quotes do you want to create?</h3>
-                <select class="form-control" id="quotesChoice">
-                <option id="one" value='1' class="btn-small" onclick="getValue(this)">1</option>
-                <option id="two" value='2' class="btn-small" onclick="getValue(this)">2</option>
-                <option type="button" name="button" id="three" value='3' class="btn-small" onclick="getValue(this)">3</option>
-                <option id="four" value='4' class="btn-small" onclick="getValue(this)">4</option>
-                <option id="five" value='5' class="btn-small" onclick="getValue(this)">5</option>
-            </select>
-            </div>
+            <div style="text-align:center">
+    <h1>Random Quote Generator</h1>
+        <div>
+            <p>Please choose your quote generator.</p>
+        <select name="quoteChoice" id="quoteChoice"/>>
+            <option value="a">a</option>
+            <option value="b">b</option>  
+        </select>       
+    </div>  
+    <div class=click>
+        <p>How many quotes would you like? You can have up to five!</p>
+            <form>
+                Number of quotes?: 
+                <input name="userInput" id="userInput" type="number" min="1" max="5"/>
+                <input type="button" onclick="printQuote()" value="Submit"/>
+            </form> 
+    </div>   
+        <ul class="list-inline">
+                    <a id="qt_btn" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Get a Quote!</a>
+                    
+                
+                </ul>   
+    <div>   
+        <p id="demo"></p>
+    </div>  
 
-			<div class="btn-big-group">
-                <h3>Choose quote generator</h3>
-                <input type="button" id="generatorOne" name="buttonsTwo" class="btn-big" value="1" onclick="getQuote(this)">
-                <input type="button" id="generatorTwo" name="buttonsTwo" class="btn-big" value="2" onclick="getQuote(this)">
-            </div>
 
-            <div id="quote"></div>
+</div> 
+    <script src="js/script.js"></script>
 
-			<div id="qt_btn" class="btn btn-primary brn-lg-active" role="button">Get Quote!</div>
-		
-	</div>
-	<script src="js/script.js"></script>
+    
 </body>
+
 </html>

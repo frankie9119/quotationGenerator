@@ -3,69 +3,62 @@ let userChoice;
 let generatorChoice;
 let first = 
 [
-[   'Peace,',
-    'Love',
-    'Money',
-    'iPhones',
-    'Beauty',
-    'Happines',
-    
-],
-[   ' will be',
-    ' will not be',
-    ' maybe wil be',
-    ' will never be',
-    ' must be',
-    ' must not be',
-    
-],
-[
-    ' your end',
-    ' your start',
-    ' your future',
-    ' your tasks',
-    ' your past',
-    
-],
+    [   'Peace,','Love','Money','iPhones','Beauty','Happines'],
+    [   ' will be',' will not be',' maybe wil be',' will never be',' must be',' must not be'],
+    [   ' your end',' your start',' your future',' your tasks',' your past'],
 ]
 
+// sentences for generatorTwo
+let second = [
+  [ 'Tulips','Roses','Daisys','Azaleas','Begonias','Gardenias'],
+  [ ' are',' are not',' maybe are',' maybe are not',' have to be',' have not to be'],
+  [ ' good',' awesome',' great',' red',' black'],
+];
+
+//generators
+function generatorOne() {
+  var picks = [];
+  for (let i = 0; i < first.length; i++) {
+    picks.push(first[i][Math.floor(Math.random() * first[i].length)]);
+  }
+  return picks.join(" ");
+}
+
+
+function generatorTwo() {
+  var nicks = [];
+  for (let i = 0; i < second.length; i++) {
+    nicks.push(second[i][Math.floor(Math.random() * second[i].length)]);
+  }
+  return nicks.join(" ");
+}
+
+function generators (){
+    var mix = document.getElementById("userInput").value;
+    for (var i = 0; i < mix; i++){
+        if (document.getElementById("quoteChoice").value === '1'){
+            return generatorOne();
+        } else if (document.getElementById("quoteChoice").value === '2'){
+            return generatorTwo();
+        }
+    }
+}
+
+
+function printQuote() {
+    var pTag = document.getElementById("demo");
+    pTag.innerText=generators();
+}
+
+printQuote();
+
+/*
 function printInside(text) {
     let newParagraph = document.createElement('p');
     newParagraph.className = "new-paragraph";
     newParagraph.innerText = text;
-    document.getElementById('quote').appendChild(newParagraph);
-       
+    document.getElementById('quote').appendChild(newParagraph);     
 }
-// sentences for generatorTwo
-let second = [
-[   'Tulips',
-    'Roses',
-    'Daisys',
-    'Azaleas',
-    'Begonias',
-    'Gardenias',
-    
-],
-[   ' are',
-    ' are not',
-    ' maybe are',
-    ' maybe are not',
-    ' have to be',
-    ' have not to be',
-    
-],
-[
-    ' good',
-    ' awesome',
-    ' great',
-    ' red',
-    ' black',
-    
-],
-
-];
-
-
 // create a quote with generator
 
 function generator(arr) {
@@ -78,63 +71,20 @@ function generator(arr) {
     }
     printInside(quoteTwo);
 };
-
-//function getValue(button) {
- //   userChoice = button.value;
-//};
-/*
-function getValue()
-    {
-      var quotesChoice = document.getElementById("quotesChoice");
-      for (var i = 0; i < quotesChoice.options.length; i++) {
-         if(quotesChoice.options[i].selected ==true){
-              return result;
-          }
-      }
-    }
-
-function getQuote(button) {
-    generatorChoice = button.value;
-   // document.getElementById('quote').innerHTML = "";
-     for (var i = 0; i < userChoice; i++) {
-        if (generatorChoice == 1) {
-            generator(first);
-        } else if (generatorChoice == 2) {
-            generator(second);
-        }   
-    } 
-}; 
 */
+//function getValue(button) {
+//    userChoice = button.value;
+//};
 
-var finalQuote = function(){
-    var quotesChoice = document.getElementById("quotesChoice");
-      for (var i = 0; i < quotesChoice.options.length; i++) {
-         if(quotesChoice.options[i].selected ==true){
-              return result;
-          }
-      }
-       generatorChoice = button.value;
-   // document.getElementById('quote').innerHTML = "";
-     for (var i = 0; i < userChoice; i++) {
-        if (generatorChoice == 1) {
-            generator(first);
-        } else if (generatorChoice == 2) {
-            generator(second);
-        }   
-    } 
-};
-
-qt_btn.addEventListener("click", function(event) {
-    finalQuote();
-});
-
-
-
-
-
-
-
-
-
-
+//function getQuote(button) {
+//    generatorChoice = button.value;
+//    document.getElementById('quote').innerHTML = "";
+//     for (var i = 0; i < userChoice; i++) {
+//        if (generatorChoice == 1) {
+//            generatorOne();
+ //       } else if (generatorChoice == 2) {
+ //           generatorTwo();
+//        }   
+//    } 
+//};
 
