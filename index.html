@@ -2,50 +2,42 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+   
          
     <title> Random quote machine </title>
 </head>
 
 <body>
     <div class="container">
-        <header>
-            
-        </header>
-
-            <div style="text-align:center">
-    <h1>Random Quote Generator</h1>
+        
+            <h1>Quotes Generator</h1>
+        
+    <div class="card">
         <div>
-            <p>Please choose your quote generator.</p>
-        <select name="quoteChoice" id="quoteChoice"/>>
-            <option value="a">a</option>
-            <option value="b">b</option>  
-        </select>       
-    </div>  
-    <div class=click>
-        <p>How many quotes would you like? You can have up to five!</p>
+            <p>Do you want to generate "Life" or "Flowers" quote?</p>
+            <select name="quoteChoice" id="quoteChoice"/>>
+                <option value="1">Life</option>
+                <option value="2">Flowers</option>  
+            </select>       
+        </div>
+        <div>
             <form>
-                Number of quotes?: 
-                <input name="userInput" id="userInput" type="number" min="1" max="5"/>
-                <input type="button" onclick="printQuote()" value="Submit"/>
+                <p>How many quotes? You can chose from 1 to 5!</p>
+                    <input name="userInput" id="userInput" type="number" min="1" max="5"/>
+                    <input type="button" onclick="printQuote()" value="Submit"/>
             </form> 
-    </div>   
-        <ul class="list-inline">
-                    <a id="qt_btn" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Get a Quote!</a>
-                    
-                
-                </ul>   
-    <div>   
-        <p id="demo"></p>
-    </div>  
+        </div>   
+        <div>   
+            <p id="demo"></p>
+        </div>  
+        
+    </div>
+    </div> 
 
-
-</div> 
     <script src="js/script.js"></script>
 
-    
 </body>
-
 </html>

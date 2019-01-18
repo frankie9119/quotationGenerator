@@ -33,15 +33,30 @@ function generatorTwo() {
   return nicks.join(" ");
 }
 
-function generators (){
+/*function generators (){
     var mix = document.getElementById("userInput").value;
     for (var i = 0; i < mix; i++){
-        if (document.getElementById("quoteChoice").value === '1'){
+        if (document.getElementById("quoteChoice").innerText === '1'){
             return generatorOne();
-        } else if (document.getElementById("quoteChoice").value === '2'){
+        } else if (document.getElementById("quoteChoice").innerText === '2'){
             return generatorTwo();
         }
     }
+}*/
+
+function generators (){
+    var mix = document.getElementById("userInput").value;
+    let sentence;
+        if (document.getElementById("quoteChoice").innerText === '1'){
+            for (var i = 0; i < mix; i++) {
+              sentence += generatorOne();
+            }
+        } else if (document.getElementById("quoteChoice").innerText === '2'){
+            for (var i = 0; i< mix; i++) {
+            sentence += generatorTwo();
+        }
+    }
+    return sentence;
 }
 
 
