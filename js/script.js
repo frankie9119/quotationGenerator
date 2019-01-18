@@ -41,23 +41,25 @@ function generators (){
     //console.log(document.getElementById("quoteChoice"));
         if (element.value === '1'){
             for (var i = 0; i < mix; i++) {
-              sentence += generatorOne() + '. ';
+              sentence += generatorOne() + '. <br>';
             }
         } else if (element.value === '2') {
             for (var i = 0; i< mix; i++) {
-            sentence += generatorTwo() + '. ';
+            sentence += generatorTwo() + '. <br> ';
         }
     }
-    console.log(sentence);
+    //console.log(sentence);
+    document.getElementById('demo').innerHTML = sentence.toString();
 }
 
-
+/*
 function printQuote() {
     var pTag = document.getElementById("demo");
     pTag.innerText=generators();
 }
 
 printQuote();
+*/
 
 /*
 // sentences for generatorOne
