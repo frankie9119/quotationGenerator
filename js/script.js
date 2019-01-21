@@ -1,3 +1,5 @@
+
+
 let userChoice;
 let generatorChoice;
 let first = 
@@ -51,6 +53,11 @@ function generators (){
     //console.log(sentence);
     document.getElementById('demo').innerHTML = sentence.toString();
 }
+
+
+
+
+
 
 /*
 function printQuote() {
