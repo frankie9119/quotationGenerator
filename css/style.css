@@ -1,18 +1,39 @@
 body{
-  background-color: #d2f0ff;
-  background-image: url("flower.jpg");
+  background-color: #787467;
  font-family: 'News Cycle', sans-serif;
  font-size: 20px;
 }
+@import "compass/css3";
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+#userInput{
+  background-color: transparent;
+}
+
+
 .quote_h1{
 font-family: 'Permanent Marker', cursive;
 font-size: 40px;
-color: #285351;
+color: #b8874d;
 }
 .container{
-  border: 4px solid #285351;
-  height: 600px;
-  width: 600px;
+  flex: 1 100%;
+  border: 4px solid #b8874d;
+  min-height: auto;
+  width: auto;
   text-align: center;
   color: #F2F3F4
   border-radius: 3px;
@@ -26,7 +47,7 @@ color: #285351;
    font-weight: bold;
    width: 378px;
    *width: 350px;
-   *background: #285351;
+   *background: #b8874d;
    -webkit-appearance: none;
 }
 
@@ -40,7 +61,7 @@ color: #285351;
    -webkit-border-radius: 9px 9px 9px 9px;
    border-radius: 9px 9px 9px 9px;
    box-shadow: 1px 1px 11px #330033;
-  background-color: #285351;
+  background-color: #b8874d;
 }
 .nice-number {
   display: inline-flex;
@@ -84,12 +105,7 @@ color: #285351;
 div {
     text-align: center;
 }
-.minus:hover{
-    background-color: red !important;
-}
-.plus:hover{
-    background-color: #717fe0 !important;
-}
+
 /*Prevent text selection*/
 span{
     -webkit-user-select: none;
@@ -140,8 +156,8 @@ input:disabled{
 
 /* Button 1 */
 .btn-1 {
-  border: 3px solid #285351;
-  color: #285351;
+  border: 3px solid #b8874d;
+  color: #b8874d;
 }
 
 /* Button 1b */
@@ -150,7 +166,7 @@ input:disabled{
   height: 0;
   top: 0;
   left: 0;
-  background: #285351;
+  background: #b8874d;
 }
 
 .btn-1b:hover,

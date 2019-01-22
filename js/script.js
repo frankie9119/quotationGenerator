@@ -16,7 +16,32 @@ let second = [
   [ ' good',' awesome',' great',' red',' black'],
 ];
 
+// trying generators
+function generator(arr) {
+    quote = "";
+    quote = arr[0][Math.floor(Math.random()*arr[0].length)];
+    quote += arr[1][Math.floor(Math.random()*arr[1].length)];
+    quote += arr[2][Math.floor(Math.random()*arr[2].length)];
+};
+function generators() {
+    var mix = document.getElementById("userInput").value;
+    let sentence = '';
+    const element = document.getElementById("quoteChoice");
+     if (element.value === '1'){
+            for (var i = 0; i < mix; i++) {
+              sentence += generator(first) + '. <br>';
+            }
+        } else if (element.value === '2') {
+            for (var i = 0; i< mix; i++) {
+            sentence += generator(second) + '. <br> ';
+        }
+    }
+    //console.log(sentence);
+    document.getElementById('demo').innerHTML = sentence.toString();
+}
+
 //generators
+/*
 function generatorOne() {
   var picks = [];
   for (let i = 0; i < first.length; i++) {
@@ -53,3 +78,4 @@ function generators (){
     //console.log(sentence);
     document.getElementById('demo').innerHTML = sentence.toString();
 }
+*/
