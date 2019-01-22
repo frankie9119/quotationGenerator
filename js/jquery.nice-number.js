@@ -1,3 +1,10 @@
+       $(function(){
+            $('input[type="number"]').niceNumber();
+            });
+
+
+
+
 (function ($) {
   $.fn.niceNumber = function(options) {
     var settings = $.extend({
