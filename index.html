@@ -1,65 +1,41 @@
 <!DOCTYPE html>
 <html lang="eng">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    
-    <link href="https://fonts.googleapis.com/css?family=News+Cycle|Permanent+Marker|Shadows+Into+Light" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        
+        <link href="https://fonts.googleapis.com/css?family=News+Cycle|Permanent+Marker|Shadows+Into+Light" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 
-    
-    
-    <title> Random quote machine </title>
-</head>
+        <title> Random quote machine </title>
+    </head>
 
-<body>
-    <div class="flex-container container">
-        <h1 class="quote_h1">Quotes Generator</h1>
-    <div class="card">
-        <p>Do you want to generate "Life" or "Flowers" quote?</p>
-        <div id="mainselection">   
-            <select name="quoteChoice" id="quoteChoice"/>
-                <option value="1">Life</option>
-                <option value="2">Flowers</option>  
-            </select>       
-        </div>
-        <p>How many quotes? you can choose up to 5!</p>
-            <div class="qty mt-5">   
-                <input type="number" class="count" name="userInput" id="userInput" value="1" min="1" max="5">  
+    <body>
+        <div class="flex-container container">
+            <h1 class="quote_h1">Quotes Generator</h1>
+            <div class="card">
+                <p>Do you want to generate "Life" or "Flowers" quote?</p>
+                <div id="mainselection">   
+                    <select name="quoteChoice" id="quoteChoice">
+                        <option value="1">Life</option>
+                        <option value="2">Flowers</option>  
+                    </select>       
+                </div>
+                    <p>How many quotes? you can choose up to 5!</p>
+                <div class="qty mt-5">   
+                    <input type="number" class="count" name="userInput" id="userInput" value="1" min="1" max="5">  
+                </div>
+                    <button id="make-quote" class="btn btn-1 btn-1b" type="button">Get Quote</button>
+                <div>   
+                    <p id="demo"></p>
+                </div>  
             </div>
-                <button class="btn btn-1 btn-1b" type="button" onclick="generators()">Get Quote</button>
-        <div>   
-            <p id="demo"></p>
-        </div>  
-    </div>
-    </div> 
-    
-     
+        </div> 
+
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/jquery.nice-number.js"></script>
-   
-    
-</body>
+    <script src="js/script.js"></script>
+
+    </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
