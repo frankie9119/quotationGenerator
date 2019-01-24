@@ -1,57 +1,8 @@
-/*
-function printInside(text) {
-    let newParagraph = document.createElement('p');
-    newParagraph.className = "new-paragraph";
-    newParagraph.innerText = text;
-    document.getElementById('quote').appendChild(newParagraph);     
-}
-// create a quote with generator
+$(function(){
 
-function generator(arr) {
-    quoteTwo = "";
-    quoteTwo = arr[0][Math.floor(Math.random()*arr[0].length)];
-    quoteTwo += arr[1][Math.floor(Math.random()*arr[1].length)];
-
-    if(arr.length == 3) {
-        quoteTwo += arr[2][Math.floor(Math.random()*arr[2].length)];
-    }
-    printInside(quoteTwo);
-};
-
-function getValue(button) {
-    userChoice = button.value;
-};*/
-
-//function getQuote(button) {
-//    generatorChoice = button.value;
-//    document.getElementById('quote').innerHTML = "";
-//     for (var i = 0; i < userChoice; i++) {
-//        if (generatorChoice == 1) {
-//            generatorOne();
- //       } else if (generatorChoice == 2) {
- //           generatorTwo();
-//        }   
-//    } 
-//};
-
-
-
-
-
-
-/*
-function printQuote() {
-    var pTag = document.getElementById("demo");
-    pTag.innerText=generators();
-}
-
-printQuote();
-*/
-
-/*
-// sentences for generatorOne
 let userChoice;
 let generatorChoice;
+// sentences for generatorOne
 let first = 
 [
     [   'Peace,','Love','Money','iPhones','Beauty','Happines'],
@@ -66,56 +17,51 @@ let second = [
   [ ' good',' awesome',' great',' red',' black'],
 ];
 
-//generators
-function generatorOne() {
-  var picks = [];
-  for (let i = 0; i < first.length; i++) {
-    picks.push(first[i][Math.floor(Math.random() * first[i].length)]);
-  }
-  return picks.join(" ");
-}
+// random generator
+function generator(arr) {
+    quote = "";
+    quote = arr[0][Math.floor(Math.random()*arr[0].length)];
+    quote += arr[1][Math.floor(Math.random()*arr[1].length)];
+    quote += arr[2][Math.floor(Math.random()*arr[2].length)];
 
-
-function generatorTwo() {
-  var nicks = [];
-  for (let i = 0; i < second.length; i++) {
-    nicks.push(second[i][Math.floor(Math.random() * second[i].length)]);
-  }
-  return nicks.join(" ");
-}
-
-/*function generators (){
-    var mix = document.getElementById("userInput").value;
-    for (var i = 0; i < mix; i++){
-        if (document.getElementById("quoteChoice").innerText === '1'){
-            return generatorOne();
-        } else if (document.getElementById("quoteChoice").innerText === '2'){
-            return generatorTwo();
-        }
-    }
-}*/
-/*
-function generators (){
-    var mix = document.getElementById("userInput").value;
-    let sentence;
-        if (document.getElementById("quoteChoice").innerText === '1'){
+    return quote
+};
+function generators() {
+    var mix = $("#userInput").val();
+    //console.log(mix)
+    let sentence = '';
+    const element = $("#quoteChoice")[0];
+     if (element.value === '1'){
             for (var i = 0; i < mix; i++) {
-              sentence += generatorOne();
+              sentence += generator(first) + '. <br>';
             }
-        } else if (document.getElementById("quoteChoice").innerText === '2'){
+        } else if (element.value === '2') {
             for (var i = 0; i< mix; i++) {
-            sentence += generatorTwo();
+            sentence += generator(second) + '. <br> ';
         }
     }
-    return sentence;
+    
+    //console.log(sentence)
+    $("#demo").html(sentence.toString());
+
 }
 
+let button = $("#make-quote");
 
-function printQuote() {
-    var pTag = document.getElementById("demo");
-    pTag.innerText=generators();
-}
+button.on("click",function(){
+  //console.log("works")
+  generators()
+})
 
-printQuote();
+})
+
+
+
+
+
+
+
+
+
 
 
